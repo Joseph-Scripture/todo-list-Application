@@ -1,6 +1,6 @@
 import "./styles.css";
 
-import {displayHome, displayAbout, displayMenu} from './pageDisplay';
+import {displayHome, displayAbout, displayMenu} from './creatingTodos';
 
 displayHome();
 
