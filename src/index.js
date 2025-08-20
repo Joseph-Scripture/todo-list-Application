@@ -1,15 +1,9 @@
 import "./styles.css";
+const container = document.querySelector('.container');
 
-import {displayHome, displayAbout, displayMenu} from './creatingTodos';
-
-displayHome();
-
-document.querySelector('.home').addEventListener('click', () => {
-    displayHome();
-});
-document.querySelector('.about').addEventListener('click', () =>{
-    displayAbout();
-})
-document.querySelector('.menu').addEventListener('click', () => {
-    displayMenu()
-})
+import { createTodo } from "./creatingTodos.js";
+const submitBtn = document.querySelector('button')
+submitBtn.addEventListener('click', (e)=>{
+    e.preventDefault();
+    container.append(createTodo())
+} )
